@@ -1,0 +1,42 @@
+Method 1 : Using Iteration
+
+arr = [10, 89, 9, 56, 4, 80, 8]
+mini = arr[0]
+
+for i in range(len(arr)):
+  if arr[i] < mini:
+     mini = arr[i]
+
+print (mini)
+
+******************************************************************
+
+Method 2 : Using sorting
+
+arr = [10, 89, 9, 56, 4, 80, 8]
+arr.sort()
+
+print (arr[0])
+
+**********************************************************************
+
+Method 3 : Using min() function
+
+arr = [10, 89, 9, 56, 4, 80, 8]
+print (min(arr))
+
+*******************************************************************
+
+Method 4 : using recursion
+
+
+def findMinRec(A, n):
+    if (n == 1):
+        return A[0]
+    return min(A[n - 1], findMinRec(A, n - 1))
+ 
+# Driver Code
+if __name__ == '__main__':
+    A = [1, 4, 45, 6, -50, 10, 2]
+    n = len(A)
+    print(findMinRec(A, n))
